@@ -1,5 +1,5 @@
 FROM alpine:3.11
-LABEL Maintainer="Tim de Pater <code@trafex.nl>" \
+LABEL Maintainer="Josh Grancell <josh@joshgrancell.com>" \
       Description="Lightweight container with Nginx 1.16 & PHP-FPM 7.3 based on Alpine Linux."
 
 # Install packages
@@ -33,7 +33,6 @@ USER nobody
 
 # Add application
 WORKDIR /var/www/html
-COPY --chown=nobody src/ /var/www/html/
 
 # Expose the port nginx is reachable on
 EXPOSE 8080
